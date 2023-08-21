@@ -1,0 +1,25 @@
+.menu {
+    background-color: var(--color-primary-3);
+    height: 35px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0 2%;
+    box-sizing: border-box;
+    -webkit-app-region: drag;
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+.menu a {
+    color: var(--color-primary-contrast);
+    text-decoration: none;
+    -webkit-app-region: no-drag;
+}
+
+.menu a:hover {
+    transform: scale(1.02);
+    transition: transform 0.1s ease-in;
+}
