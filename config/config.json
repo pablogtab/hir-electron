@@ -1,3 +1,3 @@
 {
-    "TEST": "test"
+    "API_URL": "http://localhost:8000"
 }

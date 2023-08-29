@@ -1,22 +1,20 @@
 import { useEffect, useState } from 'react';
 import { createRoot } from 'react-dom/client';
-import { HashRouter, Route, Routes } from 'react-router-dom';
+import { HashRouter } from 'react-router-dom';
+
 import { AppConfig } from '../../src/shared/configuration';
-
 import { Menu } from './components/Menu/Menu';
+import { Splash } from './components/Splash/Splash';
+import { UserProvider } from './context/userContext';
+import { ToastContainer } from 'react-toastify';
 
-
-const Sit = () => {
-    return (
-        <div>SIIIIIIT</div>
-    )
-}
+import 'react-toastify/dist/ReactToastify.css';
 
 const Home = () => {
     const [config, setConfig] = useState<AppConfig>()
     const handleClick = async () => {
         return
-    }    
+    }
 
     const openFile = async () => {
         window.hirApi.getConfig().then((config) => {
@@ -38,13 +36,13 @@ const App = () => {
         console.log(window)
     }, [])
     return (
-        <HashRouter>
-            <Menu />
-            <Routes>
-                <Route path="/" Component={Home} />
-                <Route path="/settings" Component={Sit} />
-            </Routes>
-        </HashRouter>
+        <UserProvider>
+            <HashRouter>
+                <Menu />
+                <Splash />
+            </HashRouter>
+            <ToastContainer />
+        </UserProvider>
     );
 }
 

@@ -7,16 +7,16 @@ export function getConfig() {
             const tmp = readFileSync(process.cwd() + '/config/config.json').toString()
             const config = JSON.parse(tmp)
             if (!config) {
-                writeFileSync(process.cwd() + '/config/config.json', '')
+                writeFileSync(process.cwd() + '/config/config.json', '{"API_URL":""}')
                 reject('Archivo de configuración vacío')
             }
-            if (!config.apiUrl) {
-                writeFileSync(process.cwd() + '/config/config.json', '')
-                reject('Api Url vacío: ')
+            if (!config.API_URL) {
+                //writeFileSync(process.cwd() + '/config/config.json', '{}')
+                reject('dentro de config debe configurar el parametro "API_URL"')
             }
             resolve(config)
         } catch (error) {
-            writeFileSync(process.cwd() + '/config/config.json', '')
+            //writeFileSync(process.cwd() + '/config/config.json', '{"API_URL":""}')
             reject(error)
         }
     })

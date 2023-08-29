@@ -1,0 +1,46 @@
+
+.login-card{
+    width: 400px;
+    height: 260px;
+    background-color: var(--color-primary-3);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.screen{
+    width: 100%;
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 35px);
+}
+
+.login-card input{
+    width: 80%;
+    height: 35px;
+    font-size: 15px;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+*:focus{
+    outline-color: var(--color-primary-3);
+}
+
+.login-card span{
+    margin-top: 20px;
+}
+
+.login-card span.form{
+    margin-top: 20px;
+    margin-left: 10%;
+    align-self: flex-start;
+}
+
+.login-card button{
+    margin-top: 20px;
+}
+

@@ -17,6 +17,7 @@
     color: var(--color-primary-contrast);
     text-decoration: none;
     -webkit-app-region: no-drag;
+    margin-right: 25px; 
 }
 
 .menu a:hover {
