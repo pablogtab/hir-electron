@@ -16,7 +16,7 @@ const Home = () => {
     const [config, setConfig] = useState<AppConfig>()
     const handleClick = async () => {
         return
-    }
+    }    
 
     const openFile = async () => {
         window.hirApi.getConfig().then((config) => {
